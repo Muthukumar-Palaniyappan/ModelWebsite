@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
@@ -6,3 +6,7 @@
 /SiteApi/SiteApi/bin/Debug/netcoreapp1.1
 /SiteApi/.vs/SiteApi/v15/.suo
 /SiteApi/SiteApi/obj
+SiteApi/SiteApi.Business/bin/
+SiteApi/SiteApi.Business/obj/
+SiteApi/SiteApi.Data/obj/
+SiteApi/SiteApi.Data/bin/

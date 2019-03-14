@@ -7,11 +7,17 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using SiteApi.Helpers;
+using SiteApi.Business.Services;
+using SiteApi.Business.Interfaces;
+using SiteApi.Data.Interfaces;
+using SiteApi.Data.Services;
 
 namespace SiteApi
 {
     public class Startup
     {
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -29,6 +35,15 @@ namespace SiteApi
         {
             // Add framework services.
             services.AddMvc();
+            services.AddOptions();
+            services.Configure<SiteConfigs>(Configuration.GetSection("AppSettings"));
+            AddDepenedencies(services);
+        }
+
+        private void AddDepenedencies(IServiceCollection services)
+        {
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
