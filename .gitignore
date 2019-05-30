@@ -10,3 +10,5 @@ SiteApi/SiteApi.Business/bin/
 SiteApi/SiteApi.Business/obj/
 SiteApi/SiteApi.Data/obj/
 SiteApi/SiteApi.Data/bin/
+/SiteApi/SiteApi/bin/Debug/netcoreapp2.1
+/SiteApi/.vs/SiteApi/v15/Server/sqlite3
